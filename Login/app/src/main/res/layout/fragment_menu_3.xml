@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.login.SignUp"
+    android:background="@drawable/snacks"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/enter"
+        android:text="Enter quantity under snack for delivery!"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/popcorn"
+        android:text="Popcorn: "
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/popcornq"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="24dp"
+        android:textSize="20dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nachos: "
+        android:id="@+id/nachos"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp"/>
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/nachosq"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/edname"
+        android:textSize="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="French Fries: "
+        android:id="@+id/fries"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp"/>
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/friesq"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:layout_marginLeft="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coke: "
+        android:id="@+id/coke"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp"/>
+    <EditText
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/cokeq"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:id="@+id/but"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="150dp"
+        android:textSize="20sp"
+        android:onClick="submit"
+
+        />
+</LinearLayout>

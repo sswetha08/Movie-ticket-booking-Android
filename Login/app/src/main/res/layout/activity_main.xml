@@ -53,7 +53,6 @@
         android:layout_marginTop="24dp"
         android:textSize="20dp"
         android:onClick="forpass"
-
         />
     <Button
         android:layout_width="wrap_content"

@@ -9,9 +9,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
-/**
- 16  * This app displays an order form to order coffee.
- 17  */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -32,13 +29,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, Actmain2.class);
             startActivity(intent);}
          else {
-
-            CharSequence note = "Invalid credentials!";
-            int duration = Toast.LENGTH_SHORT;
-
-            Toast toast = Toast.makeText(MainActivity.this, note, duration);
-            toast.show();
-
+            Toast.makeText(Actmain2.this,"Invalid Credentials!",Toast.LENGTH_SHORT).show();
         }}
 
     public void forpass(View view) {

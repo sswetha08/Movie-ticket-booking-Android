@@ -1,10 +1,13 @@
 package com.example.android.login;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.ListFragment;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,6 +18,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import static com.example.android.login.R.menu.actmain2;
 
 public class Actmain2 extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -35,7 +40,7 @@ public class Actmain2 extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        displaySelectedScreen(R.id.nav_menu1);
+        displaySelectedScreen(R.id.nav_menu2);
     }
 
     @Override
@@ -51,7 +56,7 @@ public class Actmain2 extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.actmain2, menu);
+        getMenuInflater().inflate(actmain2, menu);
         return true;
     }
 
@@ -73,14 +78,14 @@ public class Actmain2 extends AppCompatActivity
 
         //creating fragment object
         Fragment fragment = null;
-
+        ListFragment frag =null;
         //initializing the fragment object which is selected
         switch (itemId) {
             case R.id.nav_menu1:
                 fragment = new Menu1();
                 break;
             case R.id.nav_menu2:
-                fragment = new Menu2();
+                frag = new Menu2(); // Listfragment
                 break;
             case R.id.nav_menu3:
                 fragment = new com.example.android.login.Menu3();
@@ -96,6 +101,12 @@ public class Actmain2 extends AppCompatActivity
             ft.replace(R.id.content_frame, fragment);
             ft.commit();
         }
+        if (frag != null) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_frame, frag);
+            ft.commit();
+        }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -113,30 +124,49 @@ public class Actmain2 extends AppCompatActivity
         return true;
     }
     public void watch(View view)
-    {
-        CharSequence note = "Under construction!";
-        int duration = Toast.LENGTH_SHORT;
+    {AlertDialog alertDialog = new AlertDialog.Builder(
+            Actmain2.this).create();
+        // Setting Dialog Title
+        alertDialog.setTitle("Error");
 
-        Toast toast = Toast.makeText(Actmain2.this, note, duration);
-        toast.show();
+        // Setting Dialog Message
+        alertDialog.setMessage("Under construction!!");
+        // Setting OK Button
+        alertDialog.setButton("OK", new DialogInterface.OnClickListener()
+        {
+            public void onClick(DialogInterface dialog, int which) {
+               dialog.cancel();
+            }
+        });
+
+        // Showing Alert Message
+        alertDialog.show();
     }
 
     public void theatre(View view)
     {
-        CharSequence note = "Under construction!";
-        int duration = Toast.LENGTH_SHORT;
+        AlertDialog alertDialog = new AlertDialog.Builder(
+                Actmain2.this).create();
+        // Setting Dialog Title
+        alertDialog.setTitle("Error");
+        // Setting Dialog Message
+        alertDialog.setMessage("Under construction!!");
+        // Setting OK Button
+        alertDialog.setButton("OK", new DialogInterface.OnClickListener()
+        {
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
 
-        Toast toast = Toast.makeText(Actmain2.this, note, duration);
-        toast.show();
+        // Showing Alert Message
+        alertDialog.show();
     }
 
     public void submit(View view)
     {
-        CharSequence note = "Your preferences have been saved!!";
-        int duration = Toast.LENGTH_SHORT;
+         Toast.makeText(Actmain2.this,"Your preferences have been saved!",Toast.LENGTH_SHORT).show();
 
-        Toast toast = Toast.makeText(Actmain2.this, note, duration);
-        toast.show();
     }
 
 }

@@ -7,4 +7,21 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_actmain2">Actmain2</string>
+
+
+<string name="hello_world">Hello world!</string>
+<string name="imgdesc">imgdesc</string>
+
+<string-array name="Cinemas">
+    <item>Phoenix Theatres</item>
+    <item>Gopalan Cinemas</item>
+    <item>Gopalan Miniplex</item>
+    <item>Rex Theatres</item>
+    <item>Sangeeth Theatre</item>
+    <item>Amruth Theatre</item>
+    <item>PVR MarketCity</item>
+    <item>PVR Mahadevpura</item>
+    <item>Inox Cinemas</item>
+</string-array>
+
 </resources>

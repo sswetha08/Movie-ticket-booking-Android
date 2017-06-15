@@ -29,3 +29,4 @@ public class Menu4 extends Fragment {
         getActivity().setTitle("My Bookings");
     }
 }
+
